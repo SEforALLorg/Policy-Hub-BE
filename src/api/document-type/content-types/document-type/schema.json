@@ -4,15 +4,25 @@
   "info": {
     "singularName": "document-type",
     "pluralName": "document-types",
-    "displayName": "Document type"
+    "displayName": "Document type",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "DocumentType": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

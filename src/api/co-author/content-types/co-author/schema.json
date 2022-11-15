@@ -4,15 +4,25 @@
   "info": {
     "singularName": "co-author",
     "pluralName": "co-authors",
-    "displayName": "Co Author"
+    "displayName": "Co Author",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "AuthorName": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

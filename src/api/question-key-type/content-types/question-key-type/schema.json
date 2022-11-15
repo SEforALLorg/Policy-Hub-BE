@@ -4,15 +4,25 @@
   "info": {
     "singularName": "question-key-type",
     "pluralName": "question-key-types",
-    "displayName": "Question Key Type"
+    "displayName": "Question Key Type",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "QuestionKeyType": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

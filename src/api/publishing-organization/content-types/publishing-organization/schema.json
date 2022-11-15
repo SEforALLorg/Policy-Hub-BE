@@ -4,15 +4,25 @@
   "info": {
     "singularName": "publishing-organization",
     "pluralName": "publishing-organizations",
-    "displayName": "Publishing Organization"
+    "displayName": "Publishing Organization",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "PublishingOrganization": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_question_resource_resources",
+  "info": {
+    "displayName": "resource",
+    "icon": "calendar-plus",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "resources": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resources.resources"
+    }
+  }
+}

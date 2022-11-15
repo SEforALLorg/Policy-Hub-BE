@@ -10,7 +10,11 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "QuestionType": {
       "type": "enumeration",
@@ -18,25 +22,61 @@
         "Questionnaire",
         "Step"
       ],
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "AddAnswer": {
       "displayName": "Answer",
       "type": "component",
       "repeatable": true,
-      "component": "question-answer.answer"
+      "component": "question-answer.answer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "MainQuestion": {
       "displayName": "Question",
       "type": "component",
       "repeatable": false,
-      "component": "main-question.question"
+      "component": "main-question.question",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "QuestionTitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ToolTipText": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Resource": {
+      "displayName": "resource",
+      "type": "component",
+      "repeatable": false,
+      "component": "question-resource.resource",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
