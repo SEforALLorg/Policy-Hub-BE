@@ -3,6 +3,5 @@ module.exports = {
     defaultLimit: 200,
     maxLimit: 200,
     withCount: true,
-    
   },
 };
