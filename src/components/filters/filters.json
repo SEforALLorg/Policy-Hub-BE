@@ -51,6 +51,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::fuel.fuel"
+    },
+    "sectors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sector.sector"
     }
   }
 }
