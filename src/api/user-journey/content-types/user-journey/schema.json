@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-journey",
     "pluralName": "user-journeys",
-    "displayName": "User Journey "
+    "displayName": "User Journey ",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,6 @@
     }
   },
   "attributes": {
-    "UserInfoId": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "UID": {
       "pluginOptions": {
         "i18n": {
@@ -38,6 +31,15 @@
         }
       },
       "type": "json"
+    },
+    "UserInfoId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer",
+      "required": true
     }
   }
 }
