@@ -36,8 +36,8 @@
     "IPAddress": {
       "type": "string"
     },
-    "UID": {
-      "type": "string"
+    "Journey": {
+      "type": "json"
     }
   }
 }
