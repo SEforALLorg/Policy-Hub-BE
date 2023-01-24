@@ -46,6 +46,7 @@ module.exports = createCoreController(
         return { data:newEntry};
       }
       else{
+        UserJourneyCheck.userExist=true;
         return {data:UserJourneyCheck}
       }
     }
