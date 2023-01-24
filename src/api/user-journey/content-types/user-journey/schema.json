@@ -80,15 +80,6 @@
       },
       "type": "string"
     },
-    "VisitCount": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "default": "1"
-    },
     "Journey": {
       "pluginOptions": {
         "i18n": {
@@ -96,6 +87,15 @@
         }
       },
       "type": "json"
+    },
+    "VisitCount": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer",
+      "default": 1
     }
   }
 }
