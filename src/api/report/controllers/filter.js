@@ -14,6 +14,8 @@ module.exports = createCoreController('api::report.report', ({ strapi }) => ({
         const segment = await strapi.db.query('api::segment.segment').findMany({ orderBy: { SegmentName: 'ASC' } });
         const documentType = await strapi.db.query('api::document-type.document-type').findMany({ orderBy: { DocumentType: 'ASC' } });
         const coAuthor = await strapi.db.query('api::co-author.co-author').findMany({ orderBy: { AuthorName: 'ASC' } });
+        const fuel = await strapi.db.query('api::fuel.fuel').findMany({ orderBy: { Fuel: 'ASC' } });
+        const sector = await strapi.db.query('api::sector.sector').findMany({ orderBy: { Sector: 'ASC' } });
 
         results.countries = countries;
         results.year = years;
@@ -23,6 +25,8 @@ module.exports = createCoreController('api::report.report', ({ strapi }) => ({
         results.documentType = documentType;
         results.coAuthor = coAuthor;
         results.region = region;
+        results.fuel = fuel;
+        results.sector = sector;
         return { results }
     }
 
