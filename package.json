@@ -16,6 +16,7 @@
     "convert-array-to-csv": "^2.0.0",
     "csv-writer": "^1.6.0",
     "fs": "^0.0.1-security",
+    "node-fetch": "^2.6.7",
     "nodemailer": "^6.7.3",
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
