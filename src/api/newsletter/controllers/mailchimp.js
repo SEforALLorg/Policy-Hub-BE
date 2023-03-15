@@ -151,7 +151,7 @@ module.exports = createCoreController('api::newsletter.newsletter', ({ strapi })
         const formattedData = (item, response, countries, publishing_organizations, years) => {
             return {
                 'Report Name': item?.ReportName?.replace(/,/g, "") || "",
-                "Source": item?.URL,
+                "Source": item?.URL?.replace(/,/g, "") || "",
                 "Valid URL": response.ok ? 'Yes' : 'No',
                 "Countries": countries?.replace(/,/g, "") || "",
                 'Publishing Organization(s)': publishing_organizations?.replace(/,/g, "") || "",
