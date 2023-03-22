@@ -12,6 +12,8 @@ module.exports = ({ env }) => ({
         rejectUnauthorized: false
       }
     },
+    pool: { min: 2, max: 20 },
+    asyncStackTraces: true,
     options: {
       ssl: env.bool('DATABASE_SSL', false),
     },
