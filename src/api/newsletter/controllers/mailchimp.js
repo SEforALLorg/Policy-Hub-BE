@@ -148,36 +148,49 @@ module.exports = createCoreController('api::newsletter.newsletter', ({ strapi })
             }
         });
 
-        const formattedData = (item, response, countries, publishing_organizations, years) => {
-            return {
-                'Report Name': item?.ReportName?.replace(/,/g, "") || "",
-                "Source": item?.URL?.replace(/,/g, "") || "",
-                "Valid URL": response.ok ? 'Yes' : 'No',
-                "Countries": countries?.replace(/,/g, "") || "",
-                'Publishing Organization(s)': publishing_organizations?.replace(/,/g, "") || "",
-                "Year": years?.replace(/,/g, "") || "",
-            }
-        }
+        // const formattedData = (item, response, countries, publishing_organizations, years) => {
+        //     return {
+        //         'Report Name': item?.ReportName?.replace(/,/g, "") || "",
+        //         "Source": item?.URL?.replace(/,/g, "") || "",
+        //         "Valid URL": response.ok ? 'Yes' : 'No',
+        //         "Countries": countries?.replace(/,/g, "") || "",
+        //         'Publishing Organization(s)': publishing_organizations?.replace(/,/g, "") || "",
+        //         "Year": years?.replace(/,/g, "") || "",
+        //     }
+        // }
 
-        const data = await Promise.all(finalReports?.map(async (item) => {
+        // const data = await Promise.all(finalReports?.map(async (item) => {
+        //     const countries = item?.AddFilters?.countries[0]?.CountryName;
+        //     const publishing_organizations = item?.AddFilters?.publishing_organizations[0]?.PublishingOrganization;
+        //     const years = item?.AddFilters?.years[0]?.Year;
+        //     const isUrl = item?.URL?.includes("https:") || item?.URL?.includes("http:") || item?.URL !== null
+        //     if (isUrl) {
+        //         try {
+        //             const response = await fetch(item?.URL, {
+        //                method: 'HEAD'
+        //            })
+        //        return formattedData(item, response, countries, publishing_organizations, years);
+        //        } catch (error) {
+        //            return formattedData(item, {response: {ok: false}}, countries, publishing_organizations, years)
+        //        }
+        //     } else {
+        //         return formattedData(item, {response: {ok: false}}, countries, publishing_organizations, years)
+        //     }
+            
+        // })).then((values) => values)
+
+        const data = finalReports.map((item) => {
             const countries = item?.AddFilters?.countries[0]?.CountryName;
             const publishing_organizations = item?.AddFilters?.publishing_organizations[0]?.PublishingOrganization;
             const years = item?.AddFilters?.years[0]?.Year;
-            const isUrl = item?.URL?.includes("https:") || item?.URL?.includes("http:") || item?.URL !== null
-            if (isUrl) {
-                try {
-                    const response = await fetch(item?.URL, {
-                       method: 'HEAD'
-                   })
-               return formattedData(item, response, countries, publishing_organizations, years);
-               } catch (error) {
-                   return formattedData(item, {response: {ok: false}}, countries, publishing_organizations, years)
-               }
-            } else {
-                return formattedData(item, {response: {ok: false}}, countries, publishing_organizations, years)
-            }
-            
-        })).then((values) => values)
+            return {
+                'Report Name': item?.ReportName,
+                "Source": item?.URL,
+                "Countries": countries || "-",
+                'Publishing Organization(s)': publishing_organizations || "-",
+                "Year": years || "-",
+            };
+        });
     
         const csvData = convertArrayToCSV(data);
         const result = {
