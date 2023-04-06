@@ -183,13 +183,14 @@ module.exports = createCoreController('api::newsletter.newsletter', ({ strapi })
             const countries = item?.AddFilters?.countries[0]?.CountryName;
             const publishing_organizations = item?.AddFilters?.publishing_organizations[0]?.PublishingOrganization;
             const years = item?.AddFilters?.years[0]?.Year;
+      
             return {
-                'Report Name': item?.ReportName,
-                "Source": item?.URL,
-                "Countries": countries || "-",
-                'Publishing Organization(s)': publishing_organizations || "-",
-                "Year": years || "-",
-            };
+                    'Report Name': item?.ReportName?.replace(/,/g, "") || "",
+                    "Source": item?.URL?.replace(/,/g, "") || "",
+                    "Countries": countries?.replace(/,/g, "") || "",
+                    'Publishing Organization(s)': publishing_organizations?.replace(/,/g, "") || "",
+                    "Year": years?.replace(/,/g, "") || "",
+                 }
         });
     
         const csvData = convertArrayToCSV(data);
