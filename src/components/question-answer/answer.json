@@ -27,6 +27,12 @@
     },
     "AnswerToolTip": {
       "type": "text"
+    },
+    "FrenchAnswer": {
+      "type": "string"
+    },
+    "FrenchAnswerToolTip": {
+      "type": "text"
     }
   }
 }
