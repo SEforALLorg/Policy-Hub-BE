@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "power_supplies",
+  "info": {
+    "singularName": "power-supply",
+    "pluralName": "power-supplies",
+    "displayName": "Power supply"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PowerSupply": {
+      "type": "string"
+    }
+  }
+}

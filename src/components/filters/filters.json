@@ -56,6 +56,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::sector.sector"
+    },
+    "power_supplies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::power-supply.power-supply"
+    },
+    "technology_solutions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technology-solution.technology-solution"
     }
   }
 }

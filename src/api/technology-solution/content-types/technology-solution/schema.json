@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technology_solutions",
+  "info": {
+    "singularName": "technology-solution",
+    "pluralName": "technology-solutions",
+    "displayName": "Technology/solution\t\t"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TechnologySolution": {
+      "type": "string"
+    }
+  }
+}
