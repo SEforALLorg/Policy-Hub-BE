@@ -16,6 +16,8 @@ module.exports = createCoreController('api::report.report', ({ strapi }) => ({
         const coAuthor = await strapi.db.query('api::co-author.co-author').findMany({ orderBy: { AuthorName: 'ASC' } });
         const fuel = await strapi.db.query('api::fuel.fuel').findMany({ orderBy: { Fuel: 'ASC' } });
         const sector = await strapi.db.query('api::sector.sector').findMany({ orderBy: { Sector: 'ASC' } });
+        const powerSupply = await strapi.db.query('api::power-supply.power-supply').findMany({ orderBy: { PowerSupply: 'ASC' } });
+        const technologySolution = await strapi.db.query('api::technology-solution.technology-solution').findMany({ orderBy: { TechnologySolution: 'ASC' } });
 
         results.countries = countries;
         results.year = years;
@@ -27,6 +29,8 @@ module.exports = createCoreController('api::report.report', ({ strapi }) => ({
         results.region = region;
         results.fuel = fuel;
         results.sector = sector;
+        results.powerSupply = powerSupply;
+        results.technologySolution = technologySolution;
         return { results }
     }
 
